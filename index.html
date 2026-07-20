@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== SEO META TAGS ===== -->
+    <title>Math Solved | Premium Calculator</title>
+    <meta name="description" content="Try our premium calculator. Press '=' to see your answer – but it'll cost $999. Step-by-step video walkthrough, 24‑hour turnaround, 100% accuracy guaranteed.">
+    <meta name="keywords" content="math calculator, premium math help, solve math problems, $999 math solution, advanced calculator, step-by-step math, pay for math answer">
+    <meta name="author" content="Math Solved Inc.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://haiere.github.io/calc">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://haiere.github.io/calc">
+    <meta property="og:title" content="Math Solved | Premium Calculator">
+    <meta property="og:description" content="Enter your problem, press equals, and unlock the answer for $999. Includes a full video walkthrough and 24‑hour support.">
+    <meta property="og:image" content="https://i.postimg.cc/GmWt2wch/H-blue.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Math Solved">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://haiere.github.io/calc">
+    <meta name="twitter:title" content="Math Solved | Premium Calculator – $999 per Solution">
+    <meta name="twitter:description" content="Press equals to unlock your answer. $999 per problem. Step‑by‑step video, 24‑hour delivery.">
+    <meta name="twitter:image" content="https://i.postimg.cc/GmWt2wch/H-blue.webp">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Math Solved Premium Calculator",
+            "operatingSystem": "Web",
+            "applicationCategory": "EducationalApplication",
+            "description": "Premium calculator that reveals the solution after a $999 payment. Includes video walkthrough and 24‑hour support.",
+            "offers": {
+                "@type": "Offer",
+                "price": "999.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://haiere.github.io/calc",
+                "description": "One-time payment to unlock the step-by-step solution for your math problem."
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "218"
+            },
+            "url": "https://haiere.github.io/calc"
+        }
+    </script>
+
+    <!-- ===== STYLES (unchanged from original) ===== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+            animation: gridMove 25s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .bg-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .orb1 {
+            width: 450px;
+            height: 450px;
+            background: #6c3ce0;
+            top: -100px;
+            left: -100px;
+            animation: float 14s ease-in-out infinite;
+        }
+        .orb2 {
+            width: 350px;
+            height: 350px;
+            background: #e04090;
+            bottom: -80px;
+            right: -60px;
+            animation: float 18s ease-in-out infinite reverse;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -40px) scale(1.1); }
+            66% { transform: translate(-30px, 20px) scale(0.9); }
+        }
+
+        .app-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 420px;
+            margin: 2rem;
+            background: linear-gradient(145deg, #14141f 0%, #0e0e17 100%);
+            border-radius: 32px;
+            padding: 2rem 1.8rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+                0 0 100px rgba(108, 60, 224, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(108, 60, 224, 0.2);
+            border: 1px solid rgba(108, 60, 224, 0.5);
+            color: #b89fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1.2rem;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #fff, #c4b5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.4rem;
+        }
+
+        .subtitle {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .calc-display {
+            width: 100%;
+            background: #0b0b14;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            min-height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+            word-break: break-word;
+        }
+
+        .expression {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.02em;
+            transition: all 0.2s;
+        }
+
+        .result-preview {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #c4b5fd;
+            min-height: 3rem;
+            letter-spacing: 0.02em;
+        }
+
+        .placeholder {
+            color: #2d2d3a;
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.8rem;
+            width: 100%;
+        }
+
+        .calc-btn {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            color: #e0e0e0;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 1rem 0.2rem;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+            backdrop-filter: blur(4px);
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calc-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .calc-btn:active {
+            transform: scale(0.95);
+            background: rgba(108, 60, 224, 0.2);
+            border-color: rgba(108, 60, 224, 0.6);
+        }
+
+        .operator {
+            color: #a78bfa;
+            font-weight: 600;
+        }
+
+        .equals {
+            background: linear-gradient(135deg, #6c3ce0, #8b5cf6);
+            color: white;
+            border: none;
+            font-weight: 700;
+            grid-column: span 1;
+            box-shadow: 0 6px 20px rgba(108, 60, 224, 0.4);
+        }
+        .equals:hover {
+            background: linear-gradient(135deg, #7c4df0, #9b6dff);
+            box-shadow: 0 10px 30px rgba(108, 60, 224, 0.6);
+        }
+
+        .clear {
+            color: #f87171;
+            font-weight: 600;
+        }
+
+        .zero {
+            grid-column: span 2;
+            border-radius: 16px;
+        }
+
+        .note {
+            margin-top: 1.2rem;
+            font-size: 0.7rem;
+            color: #555;
+            letter-spacing: 0.04em;
+            text-align: center;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .modal-card {
+            background: linear-gradient(145deg, #1a1a2e 0%, #11111c 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            padding: 2.5rem 2rem;
+            max-width: 380px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 80px rgba(108, 60, 224, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+
+        .modal-icon {
+            font-size: 3rem;
+            margin-bottom: 0.8rem;
+            color: #c4b5fd;
+        }
+
+        .modal-card h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.3rem;
+        }
+
+        .price-highlight {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            background: linear-gradient(180deg, #ffffff, #c4b5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0.5rem 0;
+            line-height: 1;
+        }
+        .price-highlight .dollar {
+            font-size: 1.8rem;
+            vertical-align: super;
+            -webkit-text-fill-color: #a78bfa;
+        }
+
+        .modal-message {
+            color: #aaa;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .modal-message strong {
+            color: #e0e0e0;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .pay-btn {
+            background: linear-gradient(135deg, #6c3ce0, #8b5cf6);
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            border-radius: 60px;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(108, 60, 224, 0.5);
+            text-transform: uppercase;
+        }
+        .pay-btn:hover {
+            box-shadow: 0 15px 35px rgba(108, 60, 224, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .cancel-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ccc;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+        .cancel-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 450px) {
+            .app-container {
+                padding: 1.5rem 1.2rem;
+            }
+            .calc-btn {
+                padding: 0.8rem 0.1rem;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-grid"></div>
+    <div class="bg-orb orb1"></div>
+    <div class="bg-orb orb2"></div>
+
+    <!-- Calculator App -->
+    <div class="app-container">
+        <div class="badge">🔢 MATH SOLVED</div>
+        <h1>normal calc</h1>
+        <p class="subtitle">Press = to unlock your answer</p>
+
+        <!-- Display -->
+        <div class="calc-display">
+            <div class="expression" id="expressionDisplay"></div>
+            <div class="result-preview" id="resultDisplay">
+                <span class="placeholder">0</span>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons-grid">
+            <button class="calc-btn clear" id="clearBtn">C</button>
+            <button class="calc-btn" id="backspaceBtn">⌫</button>
+            <button class="calc-btn" id="percentBtn">%</button>
+            <button class="calc-btn operator" data-op="/">÷</button>
+
+            <button class="calc-btn" data-num="7">7</button>
+            <button class="calc-btn" data-num="8">8</button>
+            <button class="calc-btn" data-num="9">9</button>
+            <button class="calc-btn operator" data-op="*">×</button>
+
+            <button class="calc-btn" data-num="4">4</button>
+            <button class="calc-btn" data-num="5">5</button>
+            <button class="calc-btn" data-num="6">6</button>
+            <button class="calc-btn operator" data-op="-">−</button>
+
+            <button class="calc-btn" data-num="1">1</button>
+            <button class="calc-btn" data-num="2">2</button>
+            <button class="calc-btn" data-num="3">3</button>
+            <button class="calc-btn operator" data-op="+">+</button>
+
+            <button class="calc-btn zero" data-num="0">0</button>
+            <button class="calc-btn" data-num=".">.</button>
+            <button class="calc-btn equals" id="equalsBtn">=</button>
+        </div>
+        <p class="note">⚡ Answer revealed after payment • 100% accuracy guaranteed</p>
+    </div>
+
+    <!-- Modal Popup (hidden by default) -->
+    <div class="modal-overlay" id="priceModal">
+        <div class="modal-card">
+            <div class="modal-icon">🔐</div>
+            <h2>Unlock Your Answer</h2>
+            <div class="price-highlight"><span class="dollar">$</span>999</div>
+            <p class="modal-message">
+                To complete the calculation and view the step-by-step solution, a one-time payment of <strong>$999</strong> is required.
+                <br>This includes a full video walkthrough and 24‑hour support.
+            </p>
+            <div class="modal-buttons">
+                <button class="pay-btn" id="proceedPaymentBtn">Proceed to Payment →</button>
+                <button class="cancel-btn" id="closeModalBtn">Maybe later</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS (unchanged) ===== -->
+    <script>
+        (function() {
+            let currentExpression = '';
+            let lastResult = null;
+
+            const expressionDisplay = document.getElementById('expressionDisplay');
+            const resultDisplay = document.getElementById('resultDisplay');
+            const placeholderSpan = resultDisplay.querySelector('.placeholder');
+
+            const priceModal = document.getElementById('priceModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const proceedPaymentBtn = document.getElementById('proceedPaymentBtn');
+
+            function updateDisplay() {
+                expressionDisplay.textContent = currentExpression || '';
+                if (currentExpression === '') {
+                    resultDisplay.innerHTML = '<span class="placeholder">0</span>';
+                } else {
+                    resultDisplay.innerHTML = '<span style="color:#6b7280; font-size:1.5rem;">?</span>';
+                }
+            }
+
+            function safeEval(expr) {
+                let sanitized = expr.replace(/×/g, '*').replace(/÷/g, '/');
+                sanitized = sanitized.replace(/[^0-9+\-*/().%]/g, '');
+                if (!sanitized) return null;
+                try {
+                    const result = new Function('return ' + sanitized)();
+                    if (isNaN(result) || !isFinite(result)) return null;
+                    return result;
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            function appendValue(val) {
+                if (val === '.' && currentExpression.slice(-1) === '.') return;
+                currentExpression += val;
+                updateDisplay();
+            }
+
+            function appendOperator(op) {
+                if (currentExpression === '' && op !== '-') return;
+                const lastChar = currentExpression.slice(-1);
+                if (['+', '-', '×', '÷', '*', '/'].includes(lastChar) && op !== '-') {
+                    currentExpression = currentExpression.slice(0, -1) + op;
+                } else if (lastChar === '.' && op) {
+                    currentExpression = currentExpression.slice(0, -1) + op;
+                } else {
+                    currentExpression += op;
+                }
+                updateDisplay();
+            }
+
+            function clearAll() {
+                currentExpression = '';
+                lastResult = null;
+                updateDisplay();
+            }
+
+            function backspace() {
+                currentExpression = currentExpression.slice(0, -1);
+                updateDisplay();
+            }
+
+            function applyPercent() {
+                if (currentExpression === '') return;
+                const num = parseFloat(currentExpression);
+                if (!isNaN(num)) {
+                    currentExpression = (num / 100).toString();
+                } else {
+                    const result = safeEval(currentExpression);
+                    if (result !== null) {
+                        currentExpression = (result / 100).toString();
+                    }
+                }
+                updateDisplay();
+            }
+
+            function handleEquals() {
+                if (currentExpression.trim() === '') return;
+                priceModal.classList.add('active');
+            }
+
+            function closeModal() {
+                priceModal.classList.remove('active');
+            }
+
+            function proceedPayment() {
+                alert('🔐 Redirecting to secure checkout...\n\nYour problem: ' + (currentExpression || 'none') + '\nAmount: $999.00\n\n(Simulated action – in real app this would open a payment gateway.)');
+                closeModal();
+            }
+
+            document.querySelectorAll('[data-num]').forEach(btn => {
+                btn.addEventListener('click', () => appendValue(btn.dataset.num));
+            });
+
+            document.querySelectorAll('[data-op]').forEach(btn => {
+                btn.addEventListener('click', () => appendOperator(btn.dataset.op));
+            });
+
+            document.getElementById('clearBtn').addEventListener('click', clearAll);
+            document.getElementById('backspaceBtn').addEventListener('click', backspace);
+            document.getElementById('percentBtn').addEventListener('click', applyPercent);
+            document.getElementById('equalsBtn').addEventListener('click', handleEquals);
+
+            window.addEventListener('keydown', (e) => {
+                if (e.key >= '0' && e.key <= '9') {
+                    e.preventDefault();
+                    appendValue(e.key);
+                } else if (e.key === '.') {
+                    e.preventDefault();
+                    appendValue('.');
+                } else if (e.key === '+' || e.key === '-') {
+                    e.preventDefault();
+                    appendOperator(e.key);
+                } else if (e.key === '*') {
+                    e.preventDefault();
+                    appendOperator('×');
+                } else if (e.key === '/') {
+                    e.preventDefault();
+                    appendOperator('÷');
+                } else if (e.key === 'Enter' || e.key === '=') {
+                    e.preventDefault();
+                    handleEquals();
+                } else if (e.key === 'Backspace') {
+                    e.preventDefault();
+                    backspace();
+                } else if (e.key === 'Escape') {
+                    e.preventDefault();
+                    clearAll();
+                } else if (e.key === '%') {
+                    e.preventDefault();
+                    applyPercent();
+                }
+            });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            proceedPaymentBtn.addEventListener('click', proceedPayment);
+            priceModal.addEventListener('click', function(e) {
+                if (e.target === priceModal) closeModal();
+            });
+
+            updateDisplay();
+        })();
+    </script>
+</body>
+</html>
