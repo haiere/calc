@@ -1,632 +1,1745 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ===== SEO META TAGS ===== -->
-    <title>Math Solved | Premium Calculator</title>
-    <meta name="description" content="Try our premium calculator. Press '=' to see your answer – but it'll cost $999. Step-by-step video walkthrough, 24‑hour turnaround, 100% accuracy guaranteed.">
-    <meta name="keywords" content="math calculator, premium math help, solve math problems, $999 math solution, advanced calculator, step-by-step math, pay for math answer">
-    <meta name="author" content="Math Solved Inc.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://haiere.github.io/calc">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://haiere.github.io/calc">
-    <meta property="og:title" content="Math Solved | Premium Calculator">
-    <meta property="og:description" content="Enter your problem, press equals, and unlock the answer for $999. Includes a full video walkthrough and 24‑hour support.">
-    <meta property="og:image" content="https://i.postimg.cc/GmWt2wch/H-blue.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Math Solved">
+<!-- ===== SEO META TAGS ===== -->
+<title>Free Online Calculator – Instant Answers, No Paywall | Math Solved v0.1.1</title>
+<meta name="description" content="A fast, fully working online calculator for desktop and mobile. Instant results, full keyboard support, no paywall, no sign-up, no limits. Every answer is free — donations are optional.">
+<meta name="keywords" content="free calculator, online calculator, basic calculator, no paywall calculator, instant math answers, keyboard calculator, mobile calculator, math solved, free math tool">
+<meta name="author" content="Hajir Studio">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#08080d">
+<link rel="canonical" href="https://hajir.is-a.dev/calc">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://haiere.github.io/calc">
-    <meta name="twitter:title" content="Math Solved | Premium Calculator – $999 per Solution">
-    <meta name="twitter:description" content="Press equals to unlock your answer. $999 per problem. Step‑by‑step video, 24‑hour delivery.">
-    <meta name="twitter:image" content="https://i.postimg.cc/GmWt2wch/H-blue.webp">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hajir.is-a.dev/calc">
+<meta property="og:title" content="Free Online Calculator – Instant Answers, No Paywall">
+<meta property="og:description" content="Every answer is revealed instantly and for free. Keyboard support, mobile ready, no account needed. Optional: buy me a coffee.">
+<meta property="og:image" content="https://i.postimg.cc/GmWt2wch/H-blue.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Math Solved">
+<meta property="og:locale" content="en_US">
 
-    <!-- Structured Data / JSON-LD -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "Math Solved Premium Calculator",
-            "operatingSystem": "Web",
-            "applicationCategory": "EducationalApplication",
-            "description": "Premium calculator that reveals the solution after a $999 payment. Includes video walkthrough and 24‑hour support.",
-            "offers": {
-                "@type": "Offer",
-                "price": "999.00",
-                "priceCurrency": "USD",
-                "availability": "https://schema.org/InStock",
-                "url": "https://haiere.github.io/calc",
-                "description": "One-time payment to unlock the step-by-step solution for your math problem."
-            },
-            "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "218"
-            },
-            "url": "https://haiere.github.io/calc"
-        }
-    </script>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hajir.is-a.dev/calc">
+<meta name="twitter:title" content="Free Online Calculator – Instant Answers, No Paywall">
+<meta name="twitter:description" content="Fully working calculator. Instant results, keyboard support, zero paywall. 100% free forever.">
+<meta name="twitter:image" content="https://i.postimg.cc/GmWt2wch/H-blue.webp">
 
-    <!-- ===== STYLES (unchanged from original) ===== -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Structured Data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Math Solved Calculator",
+  "softwareVersion": "0.1.1",
+  "operatingSystem": "Web, Android, iOS, Windows, macOS, Linux",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "A free, fully working online calculator with instant results, keyboard support and no paywall. Optional donations are never required to see an answer.",
+  "url": "https://hajir.is-a.dev/calc",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://hajir.is-a.dev/calc"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "218"
+  }
+}
+</script>
 
-        body {
-            font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
-            background: #0a0a0f;
-            color: #e0e0e0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-            position: relative;
-        }
+<!-- Structured Data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this calculator really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every calculation and every answer is free. There is no paywall, no unlock fee, no account and no usage limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to donate to see my answer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Donations are completely optional and never unlock or block any result. The answer always appears on screen the moment you press equals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on mobile phones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The interface is fully responsive and adapts to phones, tablets and desktop screens, with large touch targets and an on-screen keypad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use my keyboard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Numbers, decimal point, the four operators, percent, Enter for equals, Backspace to delete and Escape to clear all are all supported."
+      }
+    }
+  ]
+}
+</script>
 
-        .bg-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
-            pointer-events: none;
-            z-index: 0;
-            animation: gridMove 25s linear infinite;
-        }
+<style>
+/* ============================================================
+   Math Solved — Free Calculator  v0.1.1
+   ============================================================ */
+*,
+*::before,
+*::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
+:root {
+    --bg:          #08080d;
+    --panel:       #12121c;
+    --line:        rgba(255, 255, 255, 0.09);
+    --line-strong: rgba(255, 255, 255, 0.18);
+    --text:        #edeef6;
+    --muted:       #9aa1b8;
+    --accent:      #8b5cf6;
+    --accent-soft: #c4b5fd;
+    --coffee:      #ffdd00;
+    --danger:      #fb7185;
+    --success:     #4ade80;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
 
-        .bg-orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.15;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .orb1 {
-            width: 450px;
-            height: 450px;
-            background: #6c3ce0;
-            top: -100px;
-            left: -100px;
-            animation: float 14s ease-in-out infinite;
-        }
-        .orb2 {
-            width: 350px;
-            height: 350px;
-            background: #e04090;
-            bottom: -80px;
-            right: -60px;
-            animation: float 18s ease-in-out infinite reverse;
-        }
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(40px, -40px) scale(1.1); }
-            66% { transform: translate(-30px, 20px) scale(0.9); }
-        }
+html { scroll-behavior: smooth; }
 
-        .app-container {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            max-width: 420px;
-            margin: 2rem;
-            background: linear-gradient(145deg, #14141f 0%, #0e0e17 100%);
-            border-radius: 32px;
-            padding: 2rem 1.8rem 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow:
-                0 30px 60px rgba(0, 0, 0, 0.6),
-                0 0 0 1px rgba(255, 255, 255, 0.03) inset,
-                0 0 100px rgba(108, 60, 224, 0.15);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+body {
+    font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    padding: 20px 16px 110px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+}
 
-        .badge {
-            display: inline-block;
-            background: rgba(108, 60, 224, 0.2);
-            border: 1px solid rgba(108, 60, 224, 0.5);
-            color: #b89fff;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            margin-bottom: 1.2rem;
-        }
+body.modal-open { overflow: hidden; }
 
-        h1 {
-            font-size: 1.9rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, #fff, #c4b5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.4rem;
-        }
+button { font-family: inherit; }
 
-        .subtitle {
-            color: #999;
-            font-size: 0.9rem;
-            margin-bottom: 1.8rem;
-        }
+/* ---------- Animated background ---------- */
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 52px 52px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridMove 28s linear infinite;
+}
+@keyframes gridMove {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(52px, 52px); }
+}
 
-        .calc-display {
-            width: 100%;
-            background: #0b0b14;
-            border-radius: 20px;
-            padding: 1.2rem 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            font-family: 'JetBrains Mono', 'Fira Code', monospace;
-            min-height: 90px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: center;
-            word-break: break-word;
-        }
+.bg-orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.16;
+    pointer-events: none;
+    z-index: 0;
+}
+.orb1 { width: 460px; height: 460px; background: #6c3ce0; top: -140px; left: -120px; animation: float 16s ease-in-out infinite; }
+.orb2 { width: 380px; height: 380px; background: #e04090; bottom: -120px; right: -100px; animation: float 21s ease-in-out infinite reverse; }
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33%      { transform: translate(40px, -40px) scale(1.08); }
+    66%      { transform: translate(-30px, 24px) scale(0.94); }
+}
 
-        .expression {
-            font-size: 1.1rem;
-            color: #6b7280;
-            margin-bottom: 0.4rem;
-            letter-spacing: 0.02em;
-            transition: all 0.2s;
-        }
+/* ---------- Layout ---------- */
+.layout {
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    width: 100%;
+    max-width: 1060px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    align-items: center;
+}
 
-        .result-preview {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #c4b5fd;
-            min-height: 3rem;
-            letter-spacing: 0.02em;
-        }
+/* ---------- Calculator card ---------- */
+.app-container {
+    width: 100%;
+    max-width: 440px;
+    justify-self: center;
+    background: linear-gradient(160deg, #16161f 0%, #0d0d15 100%);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 20px 20px 20px;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.65),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+        0 0 90px rgba(139, 92, 246, 0.12);
+    display: flex;
+    flex-direction: column;
+}
 
-        .placeholder {
-            color: #2d2d3a;
-        }
+.app-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
 
-        .buttons-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.8rem;
-            width: 100%;
-        }
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(139, 92, 246, 0.14);
+    border: 1px solid rgba(139, 92, 246, 0.42);
+    color: #cdb9ff;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+.badge svg { width: 14px; height: 14px; }
 
-        .calc-btn {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            color: #e0e0e0;
-            font-size: 1.3rem;
-            font-weight: 500;
-            padding: 1rem 0.2rem;
-            border-radius: 16px;
-            cursor: pointer;
-            transition: all 0.2s;
-            backdrop-filter: blur(4px);
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.version-chip {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
 
-        .calc-btn:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
+h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #c4b5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
 
-        .calc-btn:active {
-            transform: scale(0.95);
-            background: rgba(108, 60, 224, 0.2);
-            border-color: rgba(108, 60, 224, 0.6);
-        }
+.subtitle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-bottom: 16px;
+}
+.subtitle svg { width: 14px; height: 14px; color: var(--accent-soft); flex: 0 0 auto; }
+.subtitle .dot { color: #4a4a5e; }
 
-        .operator {
-            color: #a78bfa;
-            font-weight: 600;
-        }
+/* ---------- Display ---------- */
+.calc-display {
+    width: 100%;
+    background: #0a0a12;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 14px 16px;
+    min-height: 108px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
 
-        .equals {
-            background: linear-gradient(135deg, #6c3ce0, #8b5cf6);
-            color: white;
-            border: none;
-            font-weight: 700;
-            grid-column: span 1;
-            box-shadow: 0 6px 20px rgba(108, 60, 224, 0.4);
-        }
-        .equals:hover {
-            background: linear-gradient(135deg, #7c4df0, #9b6dff);
-            box-shadow: 0 10px 30px rgba(108, 60, 224, 0.6);
-        }
+.expression {
+    font-family: var(--mono);
+    font-size: 0.93rem;
+    color: var(--muted);
+    text-align: right;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    min-height: 1.3em;
+    letter-spacing: 0.01em;
+}
+.expression::-webkit-scrollbar { display: none; }
 
-        .clear {
-            color: #f87171;
-            font-weight: 600;
-        }
+.result {
+    font-family: var(--mono);
+    font-size: clamp(1.6rem, 7.5vw, 2.35rem);
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.15;
+    word-break: break-all;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    transition: color 0.2s ease;
+}
+.result.placeholder { color: #35354a; }
+.result.preview     { color: #737b96; font-weight: 600; }
+.result.final       { color: var(--accent-soft); text-shadow: 0 0 26px rgba(139, 92, 246, 0.38); }
+.result.error       { color: var(--danger); font-size: 1.1rem; font-weight: 600; }
 
-        .zero {
-            grid-column: span 2;
-            border-radius: 16px;
-        }
+@keyframes pop {
+    0%   { transform: scale(1); }
+    45%  { transform: scale(1.055); }
+    100% { transform: scale(1); }
+}
+.result.pop { animation: pop 0.32s ease; }
 
-        .note {
-            margin-top: 1.2rem;
-            font-size: 0.7rem;
-            color: #555;
-            letter-spacing: 0.04em;
-            text-align: center;
-        }
+/* ---------- Keypad ---------- */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+    width: 100%;
+}
 
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
+.calc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 6px 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    color: var(--text);
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    transition: background 0.18s ease, border-color 0.18s ease,
+                transform 0.1s ease, box-shadow 0.18s ease;
+}
+.calc-btn svg { width: 22px; height: 22px; }
 
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
+@media (hover: hover) {
+    .calc-btn:hover {
+        background: rgba(255, 255, 255, 0.09);
+        border-color: var(--line-strong);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+}
+.calc-btn:active {
+    transform: scale(0.95);
+    background: rgba(139, 92, 246, 0.22);
+    border-color: rgba(139, 92, 246, 0.6);
+}
+.calc-btn:focus-visible {
+    outline: 2px solid var(--accent-soft);
+    outline-offset: 2px;
+}
 
-        .modal-card {
-            background: linear-gradient(145deg, #1a1a2e 0%, #11111c 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 28px;
-            padding: 2.5rem 2rem;
-            max-width: 380px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7), 0 0 80px rgba(108, 60, 224, 0.3);
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
+.calc-btn.fn  { color: #f0a4b8; font-size: 1.05rem; font-weight: 700; letter-spacing: 0.02em; }
+.calc-btn.op  { color: #b79dff; }
+.calc-btn.op svg { width: 20px; height: 20px; }
 
-        .modal-overlay.active .modal-card {
-            transform: scale(1);
-        }
+.calc-btn.equals {
+    background: linear-gradient(135deg, #6c3ce0, #8b5cf6);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #fff;
+    box-shadow: 0 8px 22px rgba(108, 60, 224, 0.42);
+}
+.calc-btn.equals svg { width: 22px; height: 22px; }
+@media (hover: hover) {
+    .calc-btn.equals:hover {
+        background: linear-gradient(135deg, #7c4df0, #9d74ff);
+        box-shadow: 0 12px 30px rgba(108, 60, 224, 0.6);
+    }
+}
 
-        .modal-icon {
-            font-size: 3rem;
-            margin-bottom: 0.8rem;
-            color: #c4b5fd;
-        }
+.calc-btn.zero { grid-column: span 2; }
 
-        .modal-card h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 0.3rem;
-        }
+/* ---------- Card actions ---------- */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+}
 
-        .price-highlight {
-            font-size: 4rem;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            background: linear-gradient(180deg, #ffffff, #c4b5fd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 0.5rem 0;
-            line-height: 1;
-        }
-        .price-highlight .dollar {
-            font-size: 1.8rem;
-            vertical-align: super;
-            -webkit-text-fill-color: #a78bfa;
-        }
+.ghost-btn {
+    flex: 1 1 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 10px;
+    border-radius: 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.ghost-btn svg { width: 16px; height: 16px; flex: 0 0 auto; }
+@media (hover: hover) {
+    .ghost-btn:hover { background: rgba(255, 255, 255, 0.09); border-color: var(--line-strong); transform: translateY(-1px); }
+}
+.ghost-btn:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; }
+.ghost-btn:disabled { opacity: 0.38; cursor: not-allowed; transform: none; }
 
-        .modal-message {
-            color: #aaa;
-            margin: 1rem 0 1.5rem;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        .modal-message strong {
-            color: #e0e0e0;
-        }
+.ghost-btn.coffee {
+    color: #ffe45c;
+    background: rgba(255, 221, 0, 0.07);
+    border-color: rgba(255, 221, 0, 0.32);
+}
+@media (hover: hover) {
+    .ghost-btn.coffee:hover { background: rgba(255, 221, 0, 0.14); border-color: rgba(255, 221, 0, 0.6); }
+}
 
-        .modal-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-direction: column;
-        }
+/* ---------- Info panel ---------- */
+.info-panel {
+    width: 100%;
+    max-width: 520px;
+    justify-self: center;
+}
 
-        .pay-btn {
-            background: linear-gradient(135deg, #6c3ce0, #8b5cf6);
-            border: none;
-            color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
-            padding: 1rem 2rem;
-            border-radius: 60px;
-            letter-spacing: 0.04em;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 10px 25px rgba(108, 60, 224, 0.5);
-            text-transform: uppercase;
-        }
-        .pay-btn:hover {
-            box-shadow: 0 15px 35px rgba(108, 60, 224, 0.7);
-            transform: translateY(-2px);
-        }
+.info-panel h2 {
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #c4b5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
 
-        .cancel-btn {
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #ccc;
-            padding: 0.8rem 2rem;
-            border-radius: 60px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: 0.2s;
-            font-size: 0.9rem;
-        }
-        .cancel-btn:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
+.panel-lead {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
 
-        @media (max-width: 450px) {
-            .app-container {
-                padding: 1.5rem 1.2rem;
-            }
-            .calc-btn {
-                padding: 0.8rem 0.1rem;
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+.features {
+    list-style: none;
+    display: grid;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+.features li { display: flex; gap: 12px; align-items: flex-start; }
+
+.f-icon {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    background: rgba(139, 92, 246, 0.14);
+    border: 1px solid rgba(139, 92, 246, 0.32);
+    color: var(--accent-soft);
+}
+.f-icon svg { width: 17px; height: 17px; }
+
+.f-body strong { display: block; font-size: 0.87rem; font-weight: 700; margin-bottom: 2px; }
+.f-body p { font-size: 0.79rem; color: var(--muted); line-height: 1.5; }
+
+/* Support card */
+.support-card {
+    background: linear-gradient(150deg, rgba(255, 221, 0, 0.10), rgba(255, 221, 0, 0.02));
+    border: 1px solid rgba(255, 221, 0, 0.28);
+    border-radius: 20px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+.support-head { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; }
+.support-head > svg { width: 24px; height: 24px; color: var(--coffee); flex: 0 0 auto; margin-top: 2px; }
+.support-head h3 { font-size: 1rem; font-weight: 800; margin-bottom: 3px; color: #fff8cc; }
+.support-head p { font-size: 0.79rem; color: #cdc59a; line-height: 1.5; }
+
+.btn-coffee {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: var(--coffee);
+    color: #141414;
+    font-weight: 800;
+    font-size: 0.88rem;
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(255, 221, 0, 0.22);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.btn-coffee svg { width: 18px; height: 18px; }
+@media (hover: hover) {
+    .btn-coffee:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(255, 221, 0, 0.38); }
+}
+.btn-coffee:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+.support-url {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: #b3ab7d;
+    letter-spacing: 0.02em;
+}
+
+/* Shortcuts */
+.shortcuts h3 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+.kbd-list { list-style: none; display: grid; gap: 9px; }
+.kbd-list li { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.kbd-list span { font-size: 0.78rem; color: var(--muted); margin-left: 4px; }
+
+kbd {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #d8d9e8;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--line-strong);
+    border-bottom-width: 2px;
+    border-radius: 7px;
+    padding: 3px 7px;
+    min-width: 26px;
+    text-align: center;
+}
+
+/* ---------- Floating donate button ---------- */
+.float-coffee {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffdd00, #ffc700);
+    color: #141414;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 10px 30px rgba(255, 199, 0, 0.26), 0 4px 14px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.float-coffee svg { width: 17px; height: 17px; }
+@media (hover: hover) {
+    .float-coffee:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(255, 199, 0, 0.4); }
+}
+.float-coffee:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(4, 4, 10, 0.78);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.modal-overlay.active { opacity: 1; visibility: visible; }
+
+.modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 396px;
+    background: linear-gradient(160deg, #1a1a26 0%, #101019 100%);
+    border: 1px solid var(--line-strong);
+    border-radius: 26px;
+    padding: 32px 24px 24px;
+    text-align: center;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.72), 0 0 70px rgba(255, 221, 0, 0.07);
+    transform: translateY(16px) scale(0.97);
+    transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.modal-overlay.active .modal-card { transform: translateY(0) scale(1); }
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.modal-close svg { width: 18px; height: 18px; }
+@media (hover: hover) {
+    .modal-close:hover { background: rgba(255, 255, 255, 0.15); color: #fff; }
+}
+.modal-close:active { transform: scale(0.92); }
+.modal-close:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; }
+
+.modal-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 14px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 221, 0, 0.12);
+    border: 1px solid rgba(255, 221, 0, 0.35);
+    color: var(--coffee);
+}
+.modal-icon svg { width: 28px; height: 28px; }
+
+.modal-card h2 {
+    font-size: 1.42rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.modal-message {
+    font-size: 0.87rem;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+.modal-message strong { color: var(--text); font-weight: 700; }
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.modal-buttons .btn-coffee { width: 100%; }
+
+.btn-ghost {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cfd2e2;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+@media (hover: hover) {
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.38); }
+}
+.btn-ghost:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 2px; }
+
+.modal-note {
+    margin-top: 14px;
+    font-size: 0.72rem;
+    color: #6f7590;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Toast ---------- */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 92px;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #1d1d2b;
+    border: 1px solid var(--line-strong);
+    color: var(--text);
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 16px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.toast svg { width: 15px; height: 15px; color: var(--success); flex: 0 0 auto; }
+
+/* ---------- Desktop layout ---------- */
+@media (min-width: 1000px) {
+    body { padding: 40px 32px 40px; }
+
+    .layout {
+        grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+        gap: 58px;
+        align-items: center;
+    }
+
+    .app-container { padding: 24px 22px 22px; }
+    .calc-btn { min-height: 62px; font-size: 1.38rem; }
+    .calc-btn.fn { font-size: 1.1rem; }
+
+    .info-panel { max-width: 500px; }
+    .info-panel h2 { font-size: 1.8rem; }
+    .panel-lead { font-size: 0.92rem; }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 400px) {
+    body { padding: 14px 12px 104px; }
+    .app-container { padding: 16px 14px 16px; border-radius: 24px; }
+    h1 { font-size: 1.5rem; }
+    .calc-btn { min-height: 52px; font-size: 1.15rem; border-radius: 14px; }
+    .calc-btn svg { width: 20px; height: 20px; }
+    .ghost-btn { font-size: 0.72rem; padding: 10px 8px; gap: 6px; }
+    .ghost-btn svg { width: 14px; height: 14px; }
+    .float-coffee { right: 12px; bottom: 12px; padding: 11px 15px; font-size: 0.75rem; }
+    .float-coffee svg { width: 15px; height: 15px; }
+    .toast { bottom: 84px; font-size: 0.75rem; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
 </head>
-<body>
-    <!-- Animated background -->
-    <div class="bg-grid"></div>
-    <div class="bg-orb orb1"></div>
-    <div class="bg-orb orb2"></div>
 
-    <!-- Calculator App -->
-    <div class="app-container">
-        <div class="badge">🔢 MATH SOLVED</div>
-        <h1>normal calc</h1>
-        <p class="subtitle">Press = to unlock your answer</p>
+<body>
+<!-- ===== Decorative background ===== -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-orb orb1" aria-hidden="true"></div>
+<div class="bg-orb orb2" aria-hidden="true"></div>
+
+<div class="layout">
+
+    <!-- ================= CALCULATOR ================= -->
+    <main class="app-container">
+
+        <div class="app-top">
+            <span class="badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="4" y="2" width="16" height="20" rx="2.5"/>
+                    <line x1="8" y1="6.5" x2="16" y2="6.5"/>
+                    <line x1="8" y1="11.5" x2="8" y2="11.5"/>
+                    <line x1="12" y1="11.5" x2="12" y2="11.5"/>
+                    <line x1="16" y1="11.5" x2="16" y2="11.5"/>
+                    <line x1="8" y1="16" x2="8" y2="16"/>
+                    <line x1="12" y1="16" x2="12" y2="16"/>
+                    <line x1="16" y1="16" x2="16" y2="16"/>
+                </svg>
+                Math Solved
+            </span>
+            <span class="version-chip">v0.1.1</span>
+        </div>
+
+        <h1>Free Calculator</h1>
+        <p class="subtitle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            Instant answers
+            <span class="dot">•</span> No paywall
+            <span class="dot">•</span> No sign-up
+        </p>
 
         <!-- Display -->
         <div class="calc-display">
             <div class="expression" id="expressionDisplay"></div>
-            <div class="result-preview" id="resultDisplay">
-                <span class="placeholder">0</span>
+            <div class="result placeholder" id="resultDisplay" role="status" aria-live="polite">0</div>
+        </div>
+
+        <!-- Keypad -->
+        <div class="buttons-grid" id="keypad">
+
+            <button type="button" class="calc-btn fn" data-action="clear" aria-label="Clear all">AC</button>
+
+            <button type="button" class="calc-btn fn" data-action="backspace" aria-label="Backspace">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                    <line x1="17" y1="9.5" x2="12" y2="14.5"/>
+                    <line x1="12" y1="9.5" x2="17" y2="14.5"/>
+                </svg>
+            </button>
+
+            <button type="button" class="calc-btn fn" data-action="percent" aria-label="Percent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="19" y1="5" x2="5" y2="19"/>
+                    <circle cx="7.5" cy="7.5" r="2.4"/>
+                    <circle cx="16.5" cy="16.5" r="2.4"/>
+                </svg>
+            </button>
+
+            <button type="button" class="calc-btn op" data-op="/" aria-label="Divide">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <circle cx="12" cy="6" r="1.7" fill="currentColor" stroke="none"/>
+                    <circle cx="12" cy="18" r="1.7" fill="currentColor" stroke="none"/>
+                </svg>
+            </button>
+
+            <button type="button" class="calc-btn" data-num="7">7</button>
+            <button type="button" class="calc-btn" data-num="8">8</button>
+            <button type="button" class="calc-btn" data-num="9">9</button>
+
+            <button type="button" class="calc-btn op" data-op="*" aria-label="Multiply">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                </svg>
+            </button>
+
+            <button type="button" class="calc-btn" data-num="4">4</button>
+            <button type="button" class="calc-btn" data-num="5">5</button>
+            <button type="button" class="calc-btn" data-num="6">6</button>
+
+            <button type="button" class="calc-btn op" data-op="-" aria-label="Subtract">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+            </button>
+
+            <button type="button" class="calc-btn" data-num="1">1</button>
+            <button type="button" class="calc-btn" data-num="2">2</button>
+            <button type="button" class="calc-btn" data-num="3">3</button>
+
+            <button type="button" class="calc-btn op" data-op="+" aria-label="Add">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                </svg>
+            </button>
+
+            <button type="button" class="calc-btn zero" data-num="0">0</button>
+            <button type="button" class="calc-btn" data-num="." aria-label="Decimal point">.</button>
+
+            <button type="button" class="calc-btn equals" data-action="equals" aria-label="Equals">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true">
+                    <line x1="5" y1="9" x2="19" y2="9"/>
+                    <line x1="5" y1="15" x2="19" y2="15"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Card actions -->
+        <div class="card-actions">
+            <button type="button" class="ghost-btn" id="copyBtn" disabled>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="12" height="12" rx="2.5"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                <span>Copy answer</span>
+            </button>
+
+            <a class="ghost-btn coffee" href="https://buymeacoffee.com/hajirstudio" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 8h1.6a3.4 3.4 0 0 1 0 6.8H17"/>
+                    <path d="M3 8h14v6.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 3 14.5V8z"/>
+                    <line x1="7.5" y1="2" x2="7.5" y2="5"/>
+                    <line x1="11.5" y1="2" x2="11.5" y2="5"/>
+                </svg>
+                <span>Buy a coffee</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- ================= INFO PANEL ================= -->
+    <aside class="info-panel" aria-label="About this calculator">
+        <h2>Free. Fast. No paywall.</h2>
+        <p class="panel-lead">
+            Math Solved v0.1.1 is a real, fully working calculator. Every answer appears the instant you press
+            equals — there is no unlock fee, no account and no usage limit. Optional donations are what keep
+            the project alive.
+        </p>
+
+        <ul class="features">
+            <li>
+                <span class="f-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </span>
+                <div class="f-body">
+                    <strong>Instant results</strong>
+                    <p>Calculated locally in your browser — no server round-trip, no waiting.</p>
+                </div>
+            </li>
+
+            <li>
+                <span class="f-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="6" width="20" height="12" rx="2.5"/>
+                        <line x1="6" y1="10" x2="6" y2="10"/>
+                        <line x1="10" y1="10" x2="10" y2="10"/>
+                        <line x1="14" y1="10" x2="14" y2="10"/>
+                        <line x1="18" y1="10" x2="18" y2="10"/>
+                        <line x1="8" y1="14.5" x2="16" y2="14.5"/>
+                    </svg>
+                </span>
+                <div class="f-body">
+                    <strong>Full keyboard support</strong>
+                    <p>Type numbers and operators directly. Enter equals, Backspace deletes, Escape clears.</p>
+                </div>
+            </li>
+
+            <li>
+                <span class="f-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="11" width="18" height="11" rx="2.5"/>
+                        <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+                    </svg>
+                </span>
+                <div class="f-body">
+                    <strong>No paywall, no tracking</strong>
+                    <p>Nothing is locked behind a payment and no personal data is collected.</p>
+                </div>
+            </li>
+
+            <li>
+                <span class="f-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="4" width="14" height="11" rx="2"/>
+                        <line x1="6" y1="20" x2="12" y2="20"/>
+                        <line x1="9" y1="15" x2="9" y2="20"/>
+                        <rect x="17" y="9" width="5" height="11" rx="1.6"/>
+                    </svg>
+                </span>
+                <div class="f-body">
+                    <strong>Desktop &amp; mobile ready</strong>
+                    <p>Responsive layout with large touch targets on phones and a wide view on desktop.</p>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Support card -->
+        <div class="support-card">
+            <div class="support-head">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 8h1.6a3.4 3.4 0 0 1 0 6.8H17"/>
+                    <path d="M3 8h14v6.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 3 14.5V8z"/>
+                    <line x1="7.5" y1="2" x2="7.5" y2="5"/>
+                    <line x1="11.5" y1="2" x2="11.5" y2="5"/>
+                </svg>
+                <div>
+                    <h3>Buy me a coffee</h3>
+                    <p>Donations are 100% optional — the calculator stays free whether you donate or not.</p>
+                </div>
             </div>
+
+            <a class="btn-coffee" href="https://buymeacoffee.com/hajirstudio" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 8h1.6a3.4 3.4 0 0 1 0 6.8H17"/>
+                    <path d="M3 8h14v6.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 3 14.5V8z"/>
+                    <line x1="7.5" y1="2" x2="7.5" y2="5"/>
+                    <line x1="11.5" y1="2" x2="11.5" y2="5"/>
+                </svg>
+                Buy me a coffee
+            </a>
+
+            <span class="support-url">buymeacoffee.com/hajirstudio</span>
         </div>
 
-        <!-- Buttons -->
-        <div class="buttons-grid">
-            <button class="calc-btn clear" id="clearBtn">C</button>
-            <button class="calc-btn" id="backspaceBtn">⌫</button>
-            <button class="calc-btn" id="percentBtn">%</button>
-            <button class="calc-btn operator" data-op="/">÷</button>
-
-            <button class="calc-btn" data-num="7">7</button>
-            <button class="calc-btn" data-num="8">8</button>
-            <button class="calc-btn" data-num="9">9</button>
-            <button class="calc-btn operator" data-op="*">×</button>
-
-            <button class="calc-btn" data-num="4">4</button>
-            <button class="calc-btn" data-num="5">5</button>
-            <button class="calc-btn" data-num="6">6</button>
-            <button class="calc-btn operator" data-op="-">−</button>
-
-            <button class="calc-btn" data-num="1">1</button>
-            <button class="calc-btn" data-num="2">2</button>
-            <button class="calc-btn" data-num="3">3</button>
-            <button class="calc-btn operator" data-op="+">+</button>
-
-            <button class="calc-btn zero" data-num="0">0</button>
-            <button class="calc-btn" data-num=".">.</button>
-            <button class="calc-btn equals" id="equalsBtn">=</button>
+        <!-- Shortcuts -->
+        <div class="shortcuts">
+            <h3>Keyboard shortcuts</h3>
+            <ul class="kbd-list">
+                <li><kbd>0–9</kbd><kbd>.</kbd><span>Numbers &amp; decimals</span></li>
+                <li><kbd>+</kbd><kbd>-</kbd><kbd>*</kbd><kbd>/</kbd><span>Operators</span></li>
+                <li><kbd>%</kbd><span>Percent</span></li>
+                <li><kbd>Enter</kbd><span>Equals</span></li>
+                <li><kbd>Backspace</kbd><span>Delete last character</span></li>
+                <li><kbd>Esc</kbd><span>Clear everything</span></li>
+            </ul>
         </div>
-        <p class="note">⚡ Answer revealed after payment • 100% accuracy guaranteed</p>
+    </aside>
+</div>
+
+<!-- ===== Floating donate button (never blocks the calculator) ===== -->
+<a class="float-coffee"
+   href="https://buymeacoffee.com/hajirstudio"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Buy me a coffee — opens in a new tab">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M17 8h1.6a3.4 3.4 0 0 1 0 6.8H17"/>
+        <path d="M3 8h14v6.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 3 14.5V8z"/>
+        <line x1="7.5" y1="2" x2="7.5" y2="5"/>
+        <line x1="11.5" y1="2" x2="11.5" y2="5"/>
+    </svg>
+    <span>Buy me a coffee</span>
+</a>
+
+<!-- ===== Donate modal (optional, closable, never blocks results) ===== -->
+<div class="modal-overlay" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" aria-hidden="true">
+    <div class="modal-card">
+
+        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close donation dialog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+
+        <div class="modal-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 8h1.6a3.4 3.4 0 0 1 0 6.8H17"/>
+                <path d="M3 8h14v6.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 3 14.5V8z"/>
+                <line x1="7.5" y1="2" x2="7.5" y2="5"/>
+                <line x1="11.5" y1="2" x2="11.5" y2="5"/>
+            </svg>
+        </div>
+
+        <h2 id="donateTitle">Buy me a coffee?</h2>
+
+        <p class="modal-message">
+            Your answer is already on the screen — <strong>nothing is locked</strong>.
+            If this calculator saved you time, you can support its development with a coffee.
+            It is entirely optional.
+        </p>
+
+        <div class="modal-buttons">
+            <a class="btn-coffee"
+               href="https://buymeacoffee.com/hajirstudio"
+               target="_blank"
+               rel="noopener noreferrer"
+               id="modalDonateBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M17 8h1.6a3.4 3.4 0 0 1 0 6.8H17"/>
+                    <path d="M3 8h14v6.5a4.5 4.5 0 0 1-4.5 4.5h-5A4.5 4.5 0 0 1 3 14.5V8z"/>
+                    <line x1="7.5" y1="2" x2="7.5" y2="5"/>
+                    <line x1="11.5" y1="2" x2="11.5" y2="5"/>
+                </svg>
+                Buy me a coffee
+            </a>
+
+            <button type="button" class="btn-ghost" id="modalLaterBtn">No thanks, keep calculating</button>
+        </div>
+
+        <p class="modal-note">No payment is ever required to use this calculator.</p>
     </div>
+</div>
 
-    <!-- Modal Popup (hidden by default) -->
-    <div class="modal-overlay" id="priceModal">
-        <div class="modal-card">
-            <div class="modal-icon">🔐</div>
-            <h2>Unlock Your Answer</h2>
-            <div class="price-highlight"><span class="dollar">$</span>999</div>
-            <p class="modal-message">
-                To complete the calculation and view the step-by-step solution, a one-time payment of <strong>$999</strong> is required.
-                <br>This includes a full video walkthrough and 24‑hour support.
-            </p>
-            <div class="modal-buttons">
-                <button class="pay-btn" id="proceedPaymentBtn">Proceed to Payment →</button>
-                <button class="cancel-btn" id="closeModalBtn">Maybe later</button>
-            </div>
-        </div>
+<!-- ===== Toast ===== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span id="toastText"></span>
+</div>
+
+<noscript>
+    <div style="position:relative;z-index:2;max-width:520px;margin:0 auto;padding:20px;text-align:center;color:#9aa1b8;">
+        This calculator needs JavaScript enabled to run. Please turn on JavaScript and reload the page.
     </div>
+</noscript>
 
-    <!-- ===== SCRIPTS (unchanged) ===== -->
-    <script>
-        (function() {
-            let currentExpression = '';
-            let lastResult = null;
+<script>
+(function () {
+    'use strict';
 
-            const expressionDisplay = document.getElementById('expressionDisplay');
-            const resultDisplay = document.getElementById('resultDisplay');
-            const placeholderSpan = resultDisplay.querySelector('.placeholder');
+    /* =========================================================
+       Constants
+       ========================================================= */
+    var STORAGE_KEY = 'mathsolved.v011.donated';
 
-            const priceModal = document.getElementById('priceModal');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-            const proceedPaymentBtn = document.getElementById('proceedPaymentBtn');
+    var FIRST_PROMPT_AT   = 3;             // calculations before the first gentle reminder
+    var PROMPT_EVERY      = 6;             // calculations between later reminders
+    var PROMPT_COOLDOWN   = 3 * 60 * 1000; // 3 minutes minimum between reminders
+    var MAX_PROMPTS       = 3;             // never nag more than 3 times per session
 
-            function updateDisplay() {
-                expressionDisplay.textContent = currentExpression || '';
-                if (currentExpression === '') {
-                    resultDisplay.innerHTML = '<span class="placeholder">0</span>';
-                } else {
-                    resultDisplay.innerHTML = '<span style="color:#6b7280; font-size:1.5rem;">?</span>';
-                }
-            }
+    /* =========================================================
+       DOM
+       ========================================================= */
+    var expressionEl  = document.getElementById('expressionDisplay');
+    var resultEl      = document.getElementById('resultDisplay');
+    var keypad        = document.getElementById('keypad');
+    var copyBtn       = document.getElementById('copyBtn');
 
-            function safeEval(expr) {
-                let sanitized = expr.replace(/×/g, '*').replace(/÷/g, '/');
-                sanitized = sanitized.replace(/[^0-9+\-*/().%]/g, '');
-                if (!sanitized) return null;
-                try {
-                    const result = new Function('return ' + sanitized)();
-                    if (isNaN(result) || !isFinite(result)) return null;
-                    return result;
-                } catch (e) {
-                    return null;
-                }
-            }
+    var modal         = document.getElementById('donateModal');
+    var modalCloseBtn = document.getElementById('modalCloseBtn');
+    var modalLaterBtn = document.getElementById('modalLaterBtn');
+    var modalDonateBtn= document.getElementById('modalDonateBtn');
 
-            function appendValue(val) {
-                if (val === '.' && currentExpression.slice(-1) === '.') return;
-                currentExpression += val;
-                updateDisplay();
-            }
+    var toastEl       = document.getElementById('toast');
+    var toastText     = document.getElementById('toastText');
 
-            function appendOperator(op) {
-                if (currentExpression === '' && op !== '-') return;
-                const lastChar = currentExpression.slice(-1);
-                if (['+', '-', '×', '÷', '*', '/'].includes(lastChar) && op !== '-') {
-                    currentExpression = currentExpression.slice(0, -1) + op;
-                } else if (lastChar === '.' && op) {
-                    currentExpression = currentExpression.slice(0, -1) + op;
-                } else {
-                    currentExpression += op;
-                }
-                updateDisplay();
-            }
+    /* =========================================================
+       State
+       ========================================================= */
+    var expression     = '';
+    var justEvaluated  = false;
+    var lastEval       = null;   // { expr, value }
+    var lastRawAnswer  = '';
 
-            function clearAll() {
-                currentExpression = '';
-                lastResult = null;
-                updateDisplay();
-            }
+    /* =========================================================
+       Safe math engine (tokenizer -> shunting-yard -> RPN)
+       ========================================================= */
+    function tokenize(src) {
+        var tokens = [];
+        var i = 0;
+        while (i < src.length) {
+            var ch = src.charAt(i);
 
-            function backspace() {
-                currentExpression = currentExpression.slice(0, -1);
-                updateDisplay();
-            }
+            if (ch === ' ') { i++; continue; }
 
-            function applyPercent() {
-                if (currentExpression === '') return;
-                const num = parseFloat(currentExpression);
-                if (!isNaN(num)) {
-                    currentExpression = (num / 100).toString();
-                } else {
-                    const result = safeEval(currentExpression);
-                    if (result !== null) {
-                        currentExpression = (result / 100).toString();
+            if ((ch >= '0' && ch <= '9') || ch === '.') {
+                var num = '';
+                var dots = 0;
+                while (i < src.length) {
+                    var c = src.charAt(i);
+                    if ((c >= '0' && c <= '9') || c === '.') {
+                        if (c === '.') dots++;
+                        num += c;
+                        i++;
+                    } else {
+                        break;
                     }
                 }
-                updateDisplay();
+                if (dots > 1) throw new Error('Invalid number');
+                tokens.push({ t: 'num', v: parseFloat(num) });
+                continue;
             }
 
-            function handleEquals() {
-                if (currentExpression.trim() === '') return;
-                priceModal.classList.add('active');
+            if (ch === '+' || ch === '-' || ch === '*' || ch === '/') {
+                tokens.push({ t: 'op', v: ch });
+                i++;
+                continue;
             }
 
-            function closeModal() {
-                priceModal.classList.remove('active');
+            if (ch === '(' || ch === ')') {
+                tokens.push({ t: 'par', v: ch });
+                i++;
+                continue;
             }
 
-            function proceedPayment() {
-                alert('🔐 Redirecting to secure checkout...\n\nYour problem: ' + (currentExpression || 'none') + '\nAmount: $999.00\n\n(Simulated action – in real app this would open a payment gateway.)');
-                closeModal();
-            }
+            throw new Error('Invalid character');
+        }
+        return tokens;
+    }
 
-            document.querySelectorAll('[data-num]').forEach(btn => {
-                btn.addEventListener('click', () => appendValue(btn.dataset.num));
-            });
+    function toRPN(tokens) {
+        var out = [];
+        var stack = [];
+        var prev = null;
+        var prec = { 'u-': 4, '*': 3, '/': 3, '+': 2, '-': 2 };
 
-            document.querySelectorAll('[data-op]').forEach(btn => {
-                btn.addEventListener('click', () => appendOperator(btn.dataset.op));
-            });
+        for (var i = 0; i < tokens.length; i++) {
+            var tk = tokens[i];
 
-            document.getElementById('clearBtn').addEventListener('click', clearAll);
-            document.getElementById('backspaceBtn').addEventListener('click', backspace);
-            document.getElementById('percentBtn').addEventListener('click', applyPercent);
-            document.getElementById('equalsBtn').addEventListener('click', handleEquals);
+            if (tk.t === 'num') {
+                out.push(tk);
+            } else if (tk.t === 'op') {
+                var op = tk.v;
+                var isUnary = (op === '-' || op === '+') &&
+                    (prev === null || prev.t === 'op' || (prev.t === 'par' && prev.v === '('));
 
-            window.addEventListener('keydown', (e) => {
-                if (e.key >= '0' && e.key <= '9') {
-                    e.preventDefault();
-                    appendValue(e.key);
-                } else if (e.key === '.') {
-                    e.preventDefault();
-                    appendValue('.');
-                } else if (e.key === '+' || e.key === '-') {
-                    e.preventDefault();
-                    appendOperator(e.key);
-                } else if (e.key === '*') {
-                    e.preventDefault();
-                    appendOperator('×');
-                } else if (e.key === '/') {
-                    e.preventDefault();
-                    appendOperator('÷');
-                } else if (e.key === 'Enter' || e.key === '=') {
-                    e.preventDefault();
-                    handleEquals();
-                } else if (e.key === 'Backspace') {
-                    e.preventDefault();
-                    backspace();
-                } else if (e.key === 'Escape') {
-                    e.preventDefault();
-                    clearAll();
-                } else if (e.key === '%') {
-                    e.preventDefault();
-                    applyPercent();
+                if (isUnary) op = (op === '-') ? 'u-' : 'u+';
+
+                if (op === 'u+') { prev = tk; continue; }   // unary plus is a no-op
+
+                while (stack.length) {
+                    var top = stack[stack.length - 1];
+                    if (top.t !== 'op') break;
+                    var p1 = prec[op];
+                    var p2 = prec[top.v];
+                    var rightAssoc = (op === 'u-');
+                    if (p2 > p1 || (p2 === p1 && !rightAssoc)) {
+                        out.push(stack.pop());
+                    } else {
+                        break;
+                    }
                 }
-            });
+                stack.push({ t: 'op', v: op });
+            } else if (tk.t === 'par') {
+                if (tk.v === '(') {
+                    stack.push(tk);
+                } else {
+                    var found = false;
+                    while (stack.length) {
+                        var sTop = stack.pop();
+                        if (sTop.t === 'par' && sTop.v === '(') { found = true; break; }
+                        out.push(sTop);
+                    }
+                    if (!found) throw new Error('Mismatched parentheses');
+                }
+            }
 
-            closeModalBtn.addEventListener('click', closeModal);
-            proceedPaymentBtn.addEventListener('click', proceedPayment);
-            priceModal.addEventListener('click', function(e) {
-                if (e.target === priceModal) closeModal();
-            });
+            prev = tk;
+        }
 
-            updateDisplay();
-        })();
-    </script>
+        while (stack.length) {
+            var rest = stack.pop();
+            if (rest.t === 'par') throw new Error('Mismatched parentheses');
+            out.push(rest);
+        }
+
+        return out;
+    }
+
+    function evalRPN(rpn) {
+        var st = [];
+        for (var i = 0; i < rpn.length; i++) {
+            var tk = rpn[i];
+
+            if (tk.t === 'num') { st.push(tk.v); continue; }
+
+            if (tk.v === 'u-') {
+                if (!st.length) throw new Error('Invalid expression');
+                st.push(-st.pop());
+                continue;
+            }
+
+            if (st.length < 2) throw new Error('Invalid expression');
+
+            var b = st.pop();
+            var a = st.pop();
+
+            switch (tk.v) {
+                case '+': st.push(a + b); break;
+                case '-': st.push(a - b); break;
+                case '*': st.push(a * b); break;
+                case '/':
+                    if (b === 0) throw new Error('Division by zero');
+                    st.push(a / b);
+                    break;
+                default: throw new Error('Invalid expression');
+            }
+        }
+
+        if (st.length !== 1) throw new Error('Invalid expression');
+        return st[0];
+    }
+
+    function evaluate(src) {
+        try {
+            var tokens = tokenize(src);
+            if (!tokens.length) return { ok: false, message: 'Invalid expression' };
+            var rpn = toRPN(tokens);
+            var value = evalRPN(rpn);
+            if (typeof value !== 'number' || !isFinite(value)) {
+                return { ok: false, message: 'Undefined result' };
+            }
+            return { ok: true, value: value };
+        } catch (err) {
+            var msg = (err && err.message) === 'Division by zero'
+                ? "Can't divide by zero"
+                : 'Invalid expression';
+            return { ok: false, message: msg };
+        }
+    }
+
+    /* =========================================================
+       Formatting helpers
+       ========================================================= */
+    function displayExpr(src) {
+        return String(src).replace(/\*/g, '×').replace(/\//g, '÷');
+    }
+
+    function rawNumber(value) {
+        var abs = Math.abs(value);
+        if (abs !== 0 && (abs >= 1e15 || abs < 1e-9)) return value.toExponential(6);
+        return String(parseFloat(value.toFixed(10)));
+    }
+
+    function formatNumber(value) {
+        if (!isFinite(value)) return 'Error';
+        var abs = Math.abs(value);
+        if (abs !== 0 && (abs >= 1e15 || abs < 1e-9)) return value.toExponential(6);
+        var rounded = parseFloat(value.toFixed(10));
+        try {
+            return rounded.toLocaleString('en-US', { maximumFractionDigits: 10 });
+        } catch (e) {
+            return String(rounded);
+        }
+    }
+
+    /* =========================================================
+       Rendering
+       ========================================================= */
+    function updateCopyState() {
+        copyBtn.disabled = !lastRawAnswer;
+    }
+
+    function render() {
+        if (justEvaluated && lastEval) {
+            expressionEl.textContent = displayExpr(lastEval.expr) + ' =';
+            resultEl.textContent = formatNumber(lastEval.value);
+            resultEl.className = 'result final';
+            lastRawAnswer = rawNumber(lastEval.value);
+        } else if (expression === '') {
+            expressionEl.textContent = '';
+            resultEl.textContent = '0';
+            resultEl.className = 'result placeholder';
+            lastRawAnswer = '';
+        } else {
+            expressionEl.textContent = displayExpr(expression);
+            var preview = evaluate(expression);
+            if (preview.ok) {
+                resultEl.textContent = formatNumber(preview.value);
+                resultEl.className = 'result preview';
+            } else {
+                resultEl.textContent = '';
+                resultEl.className = 'result preview';
+            }
+            lastRawAnswer = '';
+        }
+
+        // keep the rightmost part of a long expression visible
+        expressionEl.scrollLeft = expressionEl.scrollWidth;
+        updateCopyState();
+    }
+
+    /* =========================================================
+       Input actions
+       ========================================================= */
+    function resetForFreshInput() {
+        if (justEvaluated) {
+            expression = '';
+            justEvaluated = false;
+            lastEval = null;
+        }
+    }
+
+    function inputDigit(d) {
+        resetForFreshInput();
+
+        var parts = expression.split(/[+\-*/()]/);
+        var current = parts[parts.length - 1];
+
+        if (current === '0') {
+            expression = expression.slice(0, -1) + d;   // avoid "007"
+        } else {
+            expression += d;
+        }
+        render();
+    }
+
+    function inputDot() {
+        resetForFreshInput();
+
+        var parts = expression.split(/[+\-*/()]/);
+        var current = parts[parts.length - 1];
+
+        if (current.indexOf('.') !== -1) return;         // only one dot per number
+
+        if (current === '') {
+            expression += '0.';
+        } else {
+            expression += '.';
+        }
+        render();
+    }
+
+    function inputOperator(op) {
+        if (justEvaluated && lastEval) {
+            expression = rawNumber(lastEval.value);
+            justEvaluated = false;
+            lastEval = null;
+        }
+
+        if (expression === '') {
+            if (op === '-') { expression = '-'; render(); }   // allow starting with a negative
+            return;
+        }
+
+        if (expression === '-' && op !== '-') return;         // "--" guard
+
+        var last = expression.slice(-1);
+
+        if (last === '+' || last === '-' || last === '*' || last === '/') {
+            expression = expression.slice(0, -1) + op;        // swap operators
+        } else if (last === '(') {
+            if (op === '-') expression += op;                 // allow "(-3)"
+        } else if (last === '.') {
+            expression = expression.slice(0, -1) + op;
+        } else {
+            expression += op;
+        }
+
+        render();
+    }
+
+    function applyPercent() {
+        if (justEvaluated && lastEval) {
+            expression = rawNumber(lastEval.value);
+            justEvaluated = false;
+            lastEval = null;
+        }
+
+        var match = expression.match(/(\d+(?:\.\d+)?)$/);
+        if (!match) return;
+
+        var num = parseFloat(match[1]);
+        if (!isFinite(num)) return;
+
+        var replaced = rawNumber(num / 100);
+        expression = expression.slice(0, match.index) + replaced;
+        render();
+    }
+
+    function backspace() {
+        if (justEvaluated) {
+            expression = '';
+            justEvaluated = false;
+            lastEval = null;
+            render();
+            return;
+        }
+        expression = expression.slice(0, -1);
+        render();
+    }
+
+    function clearAll() {
+        expression = '';
+        justEvaluated = false;
+        lastEval = null;
+        lastRawAnswer = '';
+        render();
+    }
+
+    function equals() {
+        if (!expression.trim()) return;
+
+        var res = evaluate(expression);
+
+        if (!res.ok) {
+            expressionEl.textContent = displayExpr(expression) + ' =';
+            resultEl.textContent = res.message;
+            resultEl.className = 'result error';
+            justEvaluated = false;
+            lastEval = null;
+            lastRawAnswer = '';
+            updateCopyState();
+            expressionEl.scrollLeft = expressionEl.scrollWidth;
+            return;
+        }
+
+        var exprText = expression;
+
+        lastEval = { expr: exprText, value: res.value };
+        lastRawAnswer = rawNumber(res.value);
+        expression = lastRawAnswer;
+        justEvaluated = true;
+
+        render();
+
+        resultEl.classList.remove('pop');
+        void resultEl.offsetWidth;          // restart the animation
+        resultEl.classList.add('pop');
+        window.setTimeout(function () { resultEl.classList.remove('pop'); }, 340);
+
+        onCalculationDone();
+    }
+
+    /* =========================================================
+       Optional donation reminders (never block the answer)
+       ========================================================= */
+    var calcCount     = 0;
+    var promptsShown  = 0;
+    var lastPromptAt  = 0;
+    var lastFocusedEl = null;
+
+    function hasDonated() {
+        try { return window.localStorage.getItem(STORAGE_KEY) === '1'; }
+        catch (e) { return false; }
+    }
+
+    function markDonated() {
+        try { window.localStorage.setItem(STORAGE_KEY, '1'); }
+        catch (e) { /* storage unavailable – ignore */ }
+    }
+
+    function onCalculationDone() {
+        calcCount++;
+        schedulePrompt();
+    }
+
+    function schedulePrompt() {
+        if (hasDonated()) return;
+        if (promptsShown >= MAX_PROMPTS) return;
+        if (modal.classList.contains('active')) return;
+
+        var now = Date.now();
+        if (promptsShown > 0 && (now - lastPromptAt) < PROMPT_COOLDOWN) return;
+
+        var threshold = FIRST_PROMPT_AT + (PROMPT_EVERY * promptsShown);
+        if (calcCount < threshold) return;
+
+        // Small delay so the user always sees the answer first.
+        window.setTimeout(function () {
+            if (!modal.classList.contains('active')) openModal();
+        }, 900);
+    }
+
+    function openModal() {
+        promptsShown++;
+        lastPromptAt = Date.now();
+        lastFocusedEl = document.activeElement;
+
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        window.setTimeout(function () {
+            if (modalCloseBtn && typeof modalCloseBtn.focus === 'function') modalCloseBtn.focus();
+        }, 60);
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+
+        if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') {
+            lastFocusedEl.focus();
+        }
+    }
+
+    /* =========================================================
+       Toast
+       ========================================================= */
+    var toastTimer = null;
+
+    function showToast(message) {
+        toastText.textContent = message;
+        toastEl.classList.add('show');
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(function () {
+            toastEl.classList.remove('show');
+        }, 1900);
+    }
+
+    /* =========================================================
+       Copy answer
+       ========================================================= */
+    function fallbackCopy(text, onDone) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed';
+        ta.style.top = '0';
+        ta.style.left = '0';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, text.length);
+        try {
+            var ok = document.execCommand('copy');
+            if (ok && typeof onDone === 'function') onDone();
+        } catch (e) { /* ignore */ }
+        document.body.removeChild(ta);
+    }
+
+    function copyAnswer() {
+        var text = lastRawAnswer;
+        if (!text) return;
+
+        var done = function () { showToast('Answer copied to clipboard'); };
+
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+            navigator.clipboard.writeText(text).then(done).catch(function () {
+                fallbackCopy(text, done);
+            });
+        } else {
+            fallbackCopy(text, done);
+        }
+    }
+
+    /* =========================================================
+       Event wiring — keypad
+       ========================================================= */
+    keypad.addEventListener('click', function (event) {
+        var btn = event.target.closest('.calc-btn');
+        if (!btn) return;
+
+        var num    = btn.getAttribute('data-num');
+        var op     = btn.getAttribute('data-op');
+        var action = btn.getAttribute('data-action');
+
+        if (num !== null) {
+            if (num === '.') inputDot();
+            else inputDigit(num);
+        } else if (op !== null) {
+            inputOperator(op);
+        } else if (action === 'clear') {
+            clearAll();
+        } else if (action === 'backspace') {
+            backspace();
+        } else if (action === 'percent') {
+            applyPercent();
+        } else if (action === 'equals') {
+            equals();
+        }
+    });
+
+    /* =========================================================
+       Event wiring — keyboard
+       ========================================================= */
+    document.addEventListener('keydown', function (event) {
+        var key = event.key;
+
+        // --- Modal open: only handle Escape and Tab trapping ---
+        if (modal.classList.contains('active')) {
+            if (key === 'Escape') {
+                event.preventDefault();
+                closeModal();
+                return;
+            }
+            if (key === 'Tab') {
+                var focusables = modal.querySelectorAll('button, a[href]');
+                if (!focusables.length) return;
+                var first = focusables[0];
+                var last = focusables[focusables.length - 1];
+                if (event.shiftKey && document.activeElement === first) {
+                    event.preventDefault();
+                    last.focus();
+                } else if (!event.shiftKey && document.activeElement === last) {
+                    event.preventDefault();
+                    first.focus();
+                }
+            }
+            return;
+        }
+
+        var ctrl = event.ctrlKey || event.metaKey;
+
+        if (ctrl && (key === 'c' || key === 'C')) {
+            if (lastRawAnswer) {
+                event.preventDefault();
+                copyAnswer();
+            }
+            return;
+        }
+        if (ctrl) return;
+
+        if (key >= '0' && key <= '9') {
+            event.preventDefault();
+            inputDigit(key);
+        } else if (key === '.') {
+            event.preventDefault();
+            inputDot();
+        } else if (key === '+') {
+            event.preventDefault();
+            inputOperator('+');
+        } else if (key === '-') {
+            event.preventDefault();
+            inputOperator('-');
+        } else if (key === '*') {
+            event.preventDefault();
+            inputOperator('*');
+        } else if (key === '/') {
+            event.preventDefault();
+            inputOperator('/');
+        } else if (key === '(' || key === ')') {
+            event.preventDefault();
+            if (justEvaluated) {
+                expression = '';
+                justEvaluated = false;
+                lastEval = null;
+            }
+            expression += key;
+            render();
+        } else if (key === '%') {
+            event.preventDefault();
+            applyPercent();
+        } else if (key === 'Enter' || key === '=') {
+            event.preventDefault();
+            equals();
+        } else if (key === 'Backspace') {
+            event.preventDefault();
+            backspace();
+        } else if (key === 'Delete') {
+            event.preventDefault();
+            clearAll();
+        } else if (key === 'Escape') {
+            event.preventDefault();
+            clearAll();
+        }
+    });
+
+    /* =========================================================
+       Event wiring — copy, modal, donate links
+       ========================================================= */
+    copyBtn.addEventListener('click', copyAnswer);
+
+    modalCloseBtn.addEventListener('click', closeModal);
+    modalLaterBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) closeModal();
+    });
+
+    if (modalDonateBtn) {
+        modalDonateBtn.addEventListener('click', function () {
+            markDonated();
+            closeModal();
+        });
+    }
+
+    // Any donation link click permanently stops the reminders for this browser.
+    var donateLinks = document.querySelectorAll('a[href*="buymeacoffee.com/hajirstudio"]');
+    for (var i = 0; i < donateLinks.length; i++) {
+        donateLinks[i].addEventListener('click', markDonated);
+    }
+
+    /* =========================================================
+       Boot
+       ========================================================= */
+    render();
+})();
+</script>
 </body>
 </html>
